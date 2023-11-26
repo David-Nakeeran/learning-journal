@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Post</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" type="module" defer></script>
+</head>
+<body>
+    <header class="width">
+        <div class="heading">
+            <img src="./images/logo.png" alt="logo" class="logo">
+            <h3>My learning journal</h3>
+        </div>    
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about-me.html" target="_self">About me</a>
+        </nav>
+    </header>
+    <main class="featured-post-container width">
+        <section class="featured-post-page">
+            <p class="featured-post-date date">July 23, 2022</p>
+            <h1>My new journey as a bootcamp student.</h1>
+            <p class="featured-post-para left-right-padding">After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
+            <div class="featured-post-img-container">
+                <img src="./images/article-image-hero.png" alt="laptop sitting on desk illuminated by lamp" class="featured-post-img">
+            </div>    
+            <p class="bold left-right-padding">How I stay committed to learning</p>
+            <p class="left-right-padding">I like to think of myself as a lifelong learner. I used to spend hours and hours learning, then try to create simple projects using what I learned or work new techniques into existing projects. While that was fun, I felt like it would be helpful to share what I was learning and most things about my journey with the world.</p>
+            <p class="bold left-right-padding">How I got started</p>
+            <p class="left-right-padding">I started simple and gradually grew my learning journal site. I would take notes about what I was learning. After each learning session, I'd use my notes to not only reflect on what I learned but also write short summaries of what I learned using my own words. That helped me grok what I was learning, and I realized that posting my learning summaries was also helping others learn and stay motivated.</p>
+        </section>
+    </main>
+        <section class="width">
+            <h4>Recent Posts</h4>
+            <div class="posts" id="posts">
+                <!-- JS -->
+            </div>
+            <div class="view-more">
+                <button id="view-more">View More</button>
+            </div>
+        </section>
+        
+    <footer class="width">
+        <p class="footer-text">My Learning Journal</p>
+        <p class="footer-copyright">Copyright ©2022</p>
+    </footer>    
+</body>
+</html>
