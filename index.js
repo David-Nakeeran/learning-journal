@@ -2,29 +2,47 @@
 
 import { postsData } from "./data.js";
 
-function render() {
-    const postContainer = document.getElementById('posts');
+const postContainer = document.getElementById('posts');
+const button = document.getElementById('view-more');
+
+function feedHTML() {
     let htmlString = ``;
 
     for(const post of postsData) {
         htmlString += `
-                <article>
-                    <img src="${post.image}">
-                    <p>${post.date}</p>
-                    <h1>${post.title}</h1>
+                <article class="blog-post" id="blog-post">
+                    <div class="img-container"><img src="${post.image}"></div>
+                    <p class="date">${post.date}</p>
+                    <h2>${post.title}</h2>
                     <p>${post.text}</p>
                 </article>
         `
-        console.log(htmlString);
-    }
-
+    };
+    
     postContainer.innerHTML = htmlString;
+    const blogPosts = document.querySelectorAll('#blog-post');
+    for(const [index, item] of blogPosts.entries()) {
+        if(index >= 3) {
+            item.classList.add('hidden')
+        };
+    };     
+};
+
+button.addEventListener('click', () => {
+    const blogPosts = document.querySelectorAll('#blog-post');
+    for(const item of blogPosts) {
+        if(item.classList.contains('hidden')) {
+            item.classList.remove('hidden');
+            button.classList.add('hidden');
+        };
+    };
+
+
+});
+
+
+function render() {
+    feedHTML();
 };
 
 render();
-
-// loop through postsData and innerHTML +=
-
-// check if parent element has 3 or less children, add class hidden to remaining elements
-
-// click view more, removes elements with hidden class
