@@ -6,6 +6,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Source Sans 3', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* header */
@@ -13,6 +16,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1.25em;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0.5em 0.9em -1em #505050;
 }
 
 .heading {
@@ -23,42 +32,249 @@ header {
     align-self: center;
 }
 
+header a {
+    margin-left: 2.5em;
+}
+
+
+
+
+
+
+/* articles */
 .posts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1em;
-    margin: 34px 20px;
+    gap: 1.5em;
+    margin: 2.125em 1.25em;
+}
+
+.img-container {
+    height: 232px;
+   
+    
+}
+
+.img-container img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+.blog-post .date {
+    font-size: 0.875rem;
+    margin: 1em 0 0 0;
+}
+
+.blog-post h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.417em 0;
+}
+
+.blog-post p {
+    color: #505050;
+    margin: 0;
+    line-height: 1.2;
 }
 
 
-
-article img{
-    width: 100%;
-}
-
-article {
-    border: 1px solid red;
-}
-
+/* featured post */
 .featured-post {
+    display: flex;
+    flex-direction: column;
+    padding: 5.438em 1.25em 1.563em 1.25em;
     background-image: url("./images/article-image-hero.png");
     background-size: cover;
     background-repeat: no-repeat;
     color: #ffffff;
-
+    margin-top: 3.125em;
 }
 
-/* typography */
+.featured-post p {
+    margin: 0;
+}
 
-h1 {
-    font-size: 32px;
-    font-weight: 700;
+.featured-post a {
+    font-size: 1.25rem;
+    color: #ffffff;
 }
 
 .date {
-    font-size: 12px;
+    text-transform: uppercase;
+}
+
+/* featured post page */
+.featured-post-page {
+    margin: 6.25em 1.25em 3.188em 1.25em;
+}
+
+.featured-post-date {
+    font-size: 0.75rem;
+    margin-bottom: 1.333em;
+
+}
+
+.featured-post-page h1 {
+    margin-bottom: 0.469em;
+}
+
+.featured-post-para {
+    margin-bottom: 2.188em;
+}
+
+.featured-post-img-container {
+    margin-bottom: 2.188em;
+}
+
+.featured-post-img {
+    width: 100%;
+}
+
+.bold {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* about me page */
+.container {
+    margin: 6.25em 1.25em 2.813em 1.25em;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    margin-bottom: 1.688em;
+}
+
+.bottom-margin-para {
+    margin-bottom: 50px;
+}
+
+
+
+/* typography */
+
+h3 {
+    margin-left: 0.125em;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.25em 0;
+    line-height: 1.1;
+}
+
+h4 {
+    text-align: center;
+}
+
+.date {
+    font-size: 0.75rem;
 }
 
 .featured-para {
-    font-size: 16px;
+    font-size: 1rem;
+}
+
+/* view more*/
+.view-more {
+    display: flex;
+    justify-content: center;
+    margin: 1.688em 0 2.688em 0;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    background-color: #ffffff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    background-color: #202020;
+    text-align: center;
+    padding: 1.875em 0;
+    width: 100%;
+
+}
+
+.footer-text {
+    color: #ececec;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.333em;
+}
+
+.footer-copyright {
+    color: #d7d7d7;
+    margin-top: 0;
+}
+
+.footer-text,
+.footer-copyright {
+    font-size: 0.75rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* media queries */
+@media (min-width: 768px) {
+    /* featured post page */
+    .featured-post-container {
+        margin: 6.25em 3.313em 4.563em 3.313em;
+    }
+
+    .featured-post-page h1 {
+        padding: 0 1.563em 0 1.563em;
+    }
+
+    .featured-post-date {
+        padding: 0 4.167em 0 4.167em;
+    }
+
+    .left-right-padding {
+        padding: 0 3.125em 0 3.125em;
+    }
+
+    .featured-post {
+        height: 30.5em;
+        padding: 0 0 3.75em 3.313em;
+        justify-content: flex-end;
+    }
+
+    .featured-post h1 {
+        font-size: 2.5rem;
+    }
+
+    /* about me page */
+    .about-me-container {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+    }
+
+    .about-me-container img {
+        grid-column: 1;
+    }
+
+    .heading-container {
+        grid-column: 2;
+    }
+
+    .para-margin {
+        margin: 0 5em;
+    }
+
+    /* site wide */
+    .width {
+        max-width: 1000px;
+    }
+
 }
